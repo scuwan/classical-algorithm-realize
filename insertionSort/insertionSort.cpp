@@ -21,16 +21,16 @@ insertionSort* insertionSort::getInstance()
 void insertionSort::sort(int* p,int sum)
 {
 	for(int i=1;i<sum;i++)
-		for(int j=i-1;j>0;j--)
+		for(int j=0;j<i;j++)
 		{
-			if(p[j]<=p[i])
+			if(p[j]<p[i])
 			{
 				int tmp = p[i];
 				for(int k=i;k>j+1;k--)
 				{
 					p[k] = p[k-1];		
 				}	
-				p[j+1] = tmp;
+				p[j] = tmp;
 				break;
 			}
 		}
