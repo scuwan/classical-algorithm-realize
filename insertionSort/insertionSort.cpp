@@ -20,6 +20,7 @@ insertionSort* insertionSort::getInstance()
 
 void insertionSort::sort(int* p,int sum)
 {
+/*
 	for(int i=1;i<sum;i++)
 		for(int j=0;j<i;j++)
 		{
@@ -34,4 +35,16 @@ void insertionSort::sort(int* p,int sum)
 				break;
 			}
 		}
+*/
+	for(int i=1;i<sum;i++)
+	{
+		int j = i-1;
+		while(j>=0&&p[j]>p[j+1])
+		{
+			int tmp = p[j+1];
+			p[j+1] = p[j];
+			p[j] = tmp;
+			j--;	
+		}
+	}
 }

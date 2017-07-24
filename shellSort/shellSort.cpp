@@ -34,6 +34,23 @@ void shellSort::sort(int *p,int sum,int factor)
 				j=j-d;
 			}
 		}
+		
+		/*
+		for(int i=d;i<sum;i++)
+		{
+			if(p[i]<p[i-d])
+			{
+				int j =i-d;
+				int x = p[i];
+				p[i] = p[i-d];
+				while(j>=0&&x<p[j]){
+					p[j+d] = p[j];
+					j-=d;
+				}
+				p[j+d] =x;
+			}
+		}*/
+
 		d= d/2;
 	}
 }
